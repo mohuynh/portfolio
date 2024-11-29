@@ -1,0 +1,28 @@
+version: '3'
+
+#Création serveur PHP, SQL et volumes (pour la base de données)
+services:
+    php-server:
+        image: cefii-ecf4 #image du server php
+        container_name: php-server #nom du container crée
+        ports:
+            - "8080:80" #port 80 du container vers le port 8080 de la machine hôte
+        depends_on:
+            - sql-server #démarre après sql-server
+            
+    sql-server:
+        image: mysql:5.7
+        container_name: sql-server
+        ports:
+            - "3306:3306"
+        environment:
+          MYSQL_DATABASE: coursportfolio #nom de la base de donnée qui est crée
+          MYSQL_USER: admin #nom de l'utilisateur crée
+          MYSQL_PASSWORD: password #mot de passe de l'utilisateur admin
+        volumes:
+            - ./:/docker-entrypoint-initdb.d #volume contenant les scripts SQL à éxécuter
+            - sql-server-data:/var/lib/mysql #volume pour le stockage de la base de données
+      
+volumes:
+    sql-server-data: {}
+    

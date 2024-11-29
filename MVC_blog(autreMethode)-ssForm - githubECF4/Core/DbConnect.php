@@ -10,9 +10,9 @@ class DbConnect
     protected $connection;
     protected $request;
 
-    const SERVER = 'localhost';
-    const USER = 'root';
-    const PASSWORD = '';
+    const SERVER = 'sql-server';
+    const USER = 'admin';
+    const PASSWORD = 'password';
     const BASE = 'coursportfolio';
 
     public function __construct()
