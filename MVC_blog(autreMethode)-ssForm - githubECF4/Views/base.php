@@ -29,8 +29,12 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?controller=creation&action=index">Mes créations</a>
+                            <a class="nav-link" href="index.php?controller=Creation&action=index">Mes créations</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?action=contact">Contact</a>
+                        </li>
+                    </ul>
                     </ul>
                 </div>
             </div>
