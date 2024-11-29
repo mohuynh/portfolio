@@ -1,0 +1,9 @@
+Construire une image pour le serveur php : docker build -t ceffi-ecf4 . 
+
+Pour l'exécution du serveur, deux possibilités:
+
+- Exécuter le serveur PHP via Docker : docker run -p 8080:80 -dit --name php-container cefii-ecf4
+  (le serveur php sera accessible sur le port 8080)
+- Exécuter le serveur PHP et le serveur MySQL de test via Docker Compose : docker-compose up -d
+
+
