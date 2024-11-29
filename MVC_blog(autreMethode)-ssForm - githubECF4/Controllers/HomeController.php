@@ -10,4 +10,9 @@ class HomeController extends Controller
         $creation = new Creation();
         $this->render('home/index');
     }
+
+    // méthode affichant la page de contact
+    public function contact() {
+        $this->render("home/contact");
+    }
 }
